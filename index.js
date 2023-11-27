@@ -21,9 +21,9 @@ app.post('/delete', (req, res) => {
     const index = req.body.index;
     if (index >= 0 && index < tasks.length) {
         tasks.splice(index, 1);
-    }
+    };
     return res.redirect('/');
-})
+});
 
 app.use((req, res) => {
     res.redirect('/');
